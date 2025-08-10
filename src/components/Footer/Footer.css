@@ -1,10 +1,36 @@
 .footer {
     width: 100%;
-
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     height: 100px;
     background-color: #ffec3d;
     box-sizing: border-box;
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 1px;
+    background-color: #4a4a4a;
+}
+
+.footer_buttons {
+    padding-top: 20px;
+}
+
+.footer_buttons a {
+    margin-left: 24px;
+    text-decoration: none;
+    font-size: 11px;
+    color: #0066cc;
+}
+
+.footer_buttons a:hover{
+    text-decoration: underline;
 }

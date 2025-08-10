@@ -1,0 +1,29 @@
+.auth-wrap { width: 100%; max-width: 900px; }
+
+.auth-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-sep { margin: 8px 0; }
+
+.auth-body {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.auth-form { width: 360px; }
+
+.form-field { display: grid; gap: 6px; margin-bottom: 12px; }
+
+.form-row { display: flex; align-items: center; gap: 8px; margin: 8px 0 16px; }
+
+.auth-links { display: grid; gap: 6px; margin-top: 12px; }
+
+.auth-placeholder {
+    width: 260px;
+    height: 260px;
+    background: #ccc;
+}

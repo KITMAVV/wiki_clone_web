@@ -6,29 +6,37 @@
 
 
 .menu-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 28px;
-    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
     transition: transform 0.3s ease;
 }
+.menu-icon {
+    width: 20px;
+    height: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-.menu-btn .bar {
+
+.menu-icon .bar {
     display: block;
     width: 100%;
-    height: 3px;
-    background-color: #000;
+    height: 2px;
+    background-color: #202122;
     transition: all 0.3s ease;
 }
 
 
 .menu-btn.open .bar:nth-child(1) {
-    transform: rotate(45deg) translate(7px, 7px);
+    transform: rotate(45deg) translate(3px, 3px);
 }
 .menu-btn.open .bar:nth-child(2) {
     opacity: 0;
@@ -47,19 +55,39 @@
     width: 210px;
     background: rgb(255, 255, 255);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
     transition: max-height 0.3s ease;
 }
 
 .menu-nav.active {
     max-height: 360px;
-    border: 1px solid #555;
+    max-width: 210px;
+    border: 1px solid #4a4a4a;
+}
+
+
+.menu-title {
+    position: relative;
+    margin: 0;
+    padding: 16px 14px 8px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.menu-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 14px;
+    width: 180px;
+    height: 1px;
+    background: #ccc;
 }
 
 .menu-nav ul {
     list-style: none;
     margin: 0;
-    padding: 15px 0;
+    padding: 3px 0 16px;
 }
 
 .menu-nav li + li {
@@ -69,16 +97,20 @@
 .menu-nav li a {
     display: block;
     text-align: left;
-    padding: 10px 15px;
+    padding: 7px 14px;
     text-decoration: none;
     color: #0336cc;
-    font-size: 0.9rem;
+    font-size: 15px;
     transition: background 0.3s, color 0.3s;
     border-radius: 4px;
 }
 
 .menu-nav li a:hover {
-    background-color: #e5e5e5;
+    background-color: #f3f2f2;
+    text-decoration: underline;
+}
+.menu-nav li a:active {
+    background-color: #f6f6f6;
 }
 
 .menu-btn,

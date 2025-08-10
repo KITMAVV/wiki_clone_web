@@ -12,15 +12,19 @@ const Menu = () => {
                 className={`menu-btn${isOpen ? ' open' : ''}`}
                 onClick={toggle}
                 aria-label="Toggle menu"
+                aria-expanded={isOpen}
             >
-                <span className="bar" />
-                <span className="bar" />
-                <span className="bar" />
+              <span className="menu-icon">
+                <span className="bar"/>
+                <span className="bar"/>
+                <span className="bar"/>
+              </span>
             </button>
 
             <nav className={`menu-nav${isOpen ? ' active' : ''}`}>
+                <div className="menu-title">Головне меню</div>
                 <ul>
-                    <li><a>Головна сторінка</a></li>
+                    <li><a href="/">Головна сторінка</a></li>  {/* - Козаче, де роутінг?(буде потім)*/}
                     <li><a>Випадкова стаття</a></li>
                     <li><a>Профіль користувача</a></li>
                 </ul>

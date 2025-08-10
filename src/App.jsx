@@ -1,32 +1,29 @@
-import { useState } from 'react'
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-// import './App.css'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Tests from "./pages/dev/testing_page.jsx";
+import Login from "./pages/Auth/Login.jsx";
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-        {/*ToDO Удалить после теста*/}
-        <Header />
-        <div
-            style={{
-                width: '100%',
-                height: '630px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                background: '#f9f9f9'
-            }}
-        >
-            <button onClick={() => setCount(c => c + 1)}>
-                count is {count}
-            </button>
+function Home() {
+    return (
+        <div>
+            <h1 style={{fontSize: 30}}>Кнопке кликат переходит по страница, пон?</h1>
+            <Link to="/tests">
+                <button>1) Tests</button>
+            </Link>
+            <Link to="/Login">
+                <button>2) Login</button>
+            </Link>
         </div>
-        <Footer/>
-    </>
-  )
+    );
 }
 
-export default App
+export default function App() {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/tests" element={<Tests />} />
+                <Route path="/login" element={<Login />} />
+            </Routes>
+        </Router>
+    );
+}
