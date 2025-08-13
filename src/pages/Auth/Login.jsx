@@ -1,14 +1,21 @@
 import AuthLayout from './AuthLayout';
-import './Login.css'
+import './Login.css';
+
 export default function Login() {
     return (
-        // ToDo почистити осьо все і написати нормальні стилі а не чатовскі
         <AuthLayout>
             <section className="auth-wrap">
+                <h1 className="auth-title">Вхід до системи</h1>
+                <hr className="auth-sep" />
+
                 <header className="auth-header">
-                    <h1>Вхід до системи</h1>
                     <div className="auth-tools">
-                        <button type="button" aria-haspopup="listbox" aria-expanded="false">
+                        <button
+                            className="auth-tools-btn"
+                            type="button"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                        >
                             Інструменти ▾
                         </button>
                     </div>
@@ -19,28 +26,48 @@ export default function Login() {
                 <div className="auth-body">
                     <form className="auth-form">
                         <div className="form-field">
-                            <label htmlFor="username">Ім’я користувача</label>
-                            <input id="username" name="username" type="text" placeholder="Введіть ім’я користувача" />
+                            <label htmlFor="username" className="form-label">Ім’я користувача</label>
+                            <input
+                                id="username"
+                                name="username"
+                                type="text"
+                                className="form-input"
+                                placeholder="Введіть ім’я користувача"
+                            />
                         </div>
 
                         <div className="form-field">
-                            <label htmlFor="password">Пароль</label>
-                            <input id="password" name="password" type="password" placeholder="Введіть пароль" />
+                            <label htmlFor="password" className="form-label">Пароль</label>
+                            <input
+                                id="password"
+                                name="password"
+                                type="password"
+                                className="form-input"
+                                placeholder="Введіть пароль"
+                            />
                         </div>
 
-                        <div className="form-row">
-                            <input id="remember" name="remember" type="checkbox" />
-                            <label htmlFor="remember">Запам’ятати мене</label>
+                        <div className="form-row form-remember">
+                            <input
+                                id="remember"
+                                name="remember"
+                                type="checkbox"
+                                className="form-checkbox"
+                            />
+                            <label htmlFor="remember" className="form-checkbox-label">
+                                Запам’ятати мене
+                            </label>
                         </div>
 
-                        <button type="submit">Вхід</button>
+                        <button type="submit" className="auth-submit">Вхід</button>
 
                         <nav className="auth-links">
-                            <a href="#">Допомога з входом у систему</a>
-                            <a href="#">Забули пароль?</a>
+                            <a href="#" className="auth-link">Допомога з входом у систему</a>
+                            <a href="#" className="auth-link">Забули пароль?</a>
                         </nav>
                     </form>
-                    <div className="auth-placeholder" aria-hidden="true" />
+
+                    <div className="auth-placeholder" aria-hidden="true"></div>
                 </div>
             </section>
         </AuthLayout>
