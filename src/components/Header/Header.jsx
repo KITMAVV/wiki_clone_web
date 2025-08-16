@@ -23,7 +23,7 @@ const Header = () => {
 
 
             <div className="header__right">
-                <a href="#">Створити обліковий запис</a>
+                <a href="/register">Створити обліковий запис</a>
                 <a href="/Login">Увійти</a>
             </div>
         </header>

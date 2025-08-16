@@ -6,7 +6,7 @@ function AuthLayout({ children }) {
         <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
             <Header />
 
-            <main style={{flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#f9f9f9'}}>
+            <main style={{flex: 1, display: 'flex', justifyContent: 'center', background: '#f9f9f9', paddingTop: '90px'}}>
                 {children}
             </main>
 

@@ -1,104 +1,4 @@
-.auth-wrap {
-    width: 100%;
-    max-width: 805px;
-    margin-left: 102px;
-}
-
-.auth-wrap h1,
-.auth-title {
-    font-size: 22px;
-    font-weight: 800;
-}
-
-.auth-header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.auth-tools {
-    height: 25px;
-}
-
-.auth-tools-btn {
-    background: none;
-    border: none;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-.auth-tools-btn:hover {
-    color: #3366CC;
-}
-
-
-.auth-sep {
-    margin: 8px 0;
-}
-
-.auth-body {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-}
-
-.auth-form {
-    width: 360px;
-}
-
-.field_name,
-.form-field {
-    display: grid;
-    gap: 3px;
-    margin-bottom: 14px;
-    max-width: 260px;
-}
-
-.form-label {
-    font-size: 15px;
-}
-
-.form-input {
-    border-radius: 0;
-    border: #4A4A4A 1px solid;
-    height: 30px;
-    padding: 0 9px;
-    font-size: 15px;
-    color: rgba(0, 0, 0, 0.5);
-}
-
-.form-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 8px 0 16px;
-}
-
-.form-remember {}
-
-.form-checkbox {
-    cursor: pointer;
-    scale: 1.3;
-}
-
-.form-checkbox-label {
-    font-size: 15px;
-    color: rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-}
-
-.auth-submit {
-    background: #3366CC;
-    width: 260px;
-    height: 30px;
-    color: white;
-    font-weight: 700;
-    font-size: 15px;
-    border: none;
-    cursor: pointer;
-}
-
-.auth-links {
+.login-links {
     max-width: 260px;
     display: grid;
     gap: 6px;
@@ -106,31 +6,19 @@
     text-align: center;
 }
 
-.auth-link {
+.login-link {
     font-size: 15px;
     color: rgba(0, 0, 0, 0.5);
 }
 
-.auth-link:hover {
+.login-link:hover {
     text-decoration: underline;
 }
 
-.auth-placeholder {
+
+/*КАРТИНКА*/
+.login-placeholder {
     width: 260px;
     height: 260px;
     background: #ccc;
 }
-
-/*@media (max-width: 720px) {*/
-/*    .auth-body {*/
-/*        flex-direction: column;*/
-/*    }*/
-
-/*    .auth-placeholder {*/
-/*        */
-/*    }*/
-
-/*    .auth-form {*/
-/*        */
-/*    }*/
-/*}*/
