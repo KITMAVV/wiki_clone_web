@@ -1,0 +1,121 @@
+.home-page-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f9f9f9;
+    padding-top: 90px;
+}
+
+.adds-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 1220px;
+    height: 65px;
+    background: #ccc;
+    margin-top: 15px;
+    border: black 1px solid;
+}
+
+.home-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 1220px;
+    margin-top: 18px;
+    border-bottom: 1px solid #b5c1c6;
+    border-top: 1px solid #b5c1c6;
+}
+
+.home-tabs-left, .home-tabs-right {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+}
+
+.home-tab {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 6px 8px;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid transparent;
+    line-height: 1.2;
+}
+
+.home-tab:hover {
+    color: #0066cc;
+}
+
+.home-tab.active {
+    border-bottom-color: #333;
+    font-weight: 600;
+}
+
+.home-welcome {
+
+    width: 1220px;
+    height: 185px;
+    margin-top: 10px;
+    padding: 30px 40px 0;
+
+    display: grid;
+    grid-template-columns: 440px 1fr;
+    grid-template-areas:
+    "left right"
+    "tabs tabs";
+    gap: 16px 24px;
+    border: #b5c1c6 1px solid;
+    border-radius: 2px;
+    border-top: none;
+}
+
+.home-welcome-left  { grid-area: left; }
+.home-welcome-right { grid-area: right; align-content: end; }
+
+.home-welcome-left h1{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.home-welcome-left p{
+    font-size: 17px;
+    max-width: 390px;
+    margin-left: 2px;
+}
+
+.home-welcome-right p{
+    font-size: 14px;
+    text-align: right;
+}
+
+.home-welcome-tabs {
+    grid-area: tabs;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 110px;
+    padding: 10px 0;
+}
+
+.home-welcome-tabs a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #2a5db0;
+}
+
+.home-welcome-tabs a:hover {
+    text-decoration: underline;
+}
+
+.home-cards {
+    width: 1220px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+

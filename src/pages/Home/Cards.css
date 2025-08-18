@@ -1,0 +1,115 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #b5c1c6;
+    border-top: 4px solid #4a4a4a;
+    border-radius: 2px;
+    padding: 16px;
+    background: #fff;
+}
+.card__body {
+    flex: 1;
+    min-height: 120px;
+    position: relative;
+}
+.card__body::after { content: ""; display: block; clear: both; }
+
+.card__header { margin-bottom: 8px; }
+.card__title { margin: 0; font-size: 22px; line-height: 1.2; font-weight: 600; text-align: left; }
+
+.card__image {
+    float: right;
+    width: 120px;
+    height: auto;
+    margin: 0 0 8px 16px;
+    border-radius: 2px;
+    object-fit: cover;
+}
+.card__text {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.55;
+    padding: 5px;
+    color: #222;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    padding-top: 8px;
+    /*border-top: 1px solid #ddd;*/
+}
+.card__btn {
+    display: inline-block;
+    height: 30px;
+    padding: 3px 10px;
+    font-weight: 700;
+    text-decoration: none;
+    background: #faed3d;
+    border: 1px solid #4a4a4a;
+    border-radius: 2px;
+    color: #000;
+    font-size: 14px;
+}
+.card__btn:hover { filter: brightness(0.95); }
+.card__link {
+    color: #3366cc;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.card__link:hover { text-decoration: underline; }
+
+.card.card--image-top .card__image {
+    float: none;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 0 120px 0;
+    object-fit: cover;
+}
+
+.card.card--img-sm .card__image { width: 120px; }
+.card.card--img-md .card__image { width: 160px; }
+.card.card--img-lg .card__image { width: 220px; }
+
+.card.card--img-full .card__image {
+    width: 100%;
+    float: none;
+    display: block;
+    margin: 0 0 12px 0;
+    object-fit: cover;
+}
+
+.card.card--no-link .card__link { display: none; }
+
+.card.card--image-top.card--img-full .card__image {
+    margin: 0 auto 12px auto;
+    width: auto;
+    max-width: 60%;
+}
+.card.card--image-top.card--img-full .card__text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+
+
+.card__text--list {
+    position: relative;
+    padding-left: 20px;
+    margin: 6px 0;
+}
+.card__text--list::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #4a4a4a;
+    font-weight: bold;
+}

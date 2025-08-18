@@ -2,8 +2,10 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Tests from "./pages/dev/testing_page.jsx";
 import Login from "./pages/Auth/Login.jsx";
 import Register from "./pages/Auth/Register.jsx";
+import HomePage from "./pages/Home/Home.jsx";
 
 import styles from "./test.module.css";
+
 
 function Home() {
     return (
@@ -13,6 +15,7 @@ function Home() {
             <Link to="/tests" className={styles.btn}>1) Tests</Link>
             <Link to="/login" className={styles.btn}>2) Login</Link>
             <Link to="/register" className={styles.btn}>3) Register</Link>
+            <Link to="/home" className={styles.btn}>4) Home</Link>
         </div>
     );
 }
@@ -24,7 +27,8 @@ export default function App() {
                 <Route path="/" element={<Home/>}/>
                 <Route path="/tests" element={<Tests/>}/>
                 <Route path="/login" element={<Login/>}/>
-                <Route path="/register" element={<Register/>} />
+                <Route path="/register" element={<Register/>}/>
+                <Route path="/home" element={<HomePage/>}/>
             </Routes>
         </Router>
     );
