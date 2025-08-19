@@ -1,5 +1,6 @@
 import Header from '../../components/Header/Header.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
+import Page_menu from "../../components/Page_menu/Page_menu.jsx";
 import Card from "./Cards.jsx";
 
 import './Home.css'
@@ -15,18 +16,7 @@ function HomePage() {
                     <p>*РЕКЛАМНИЙ БАНЕР*</p>
                 </div>
 
-                <div className="home-tools">
-                    <div className="home-tabs-left">
-                        <a href="#" className="home-tab active">Головна</a>  {/*ToDo актив штука настроить скрипт джава пон*/}
-                        <a href="#" className="home-tab">Обговорення</a>
-                    </div>
-                    <div className="home-tabs-right">
-                        <a href="#" className="home-tab active">Читати</a>
-                        <a href="#" className="home-tab">Переглянути код</a>
-                        <a href="#" className="home-tab">Переглянути історію</a>
-                        <a href="#" className="home-tab">Інструменти ▾</a> {/*ToDo инструменты сделать как в логине*/}
-                    </div>
-                </div>
+                <Page_menu />
 
                 <section className="home-welcome">
                     <div className="home-welcome-left">

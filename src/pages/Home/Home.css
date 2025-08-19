@@ -19,41 +19,6 @@
     border: black 1px solid;
 }
 
-.home-tools {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 1220px;
-    margin-top: 18px;
-    border-bottom: 1px solid #b5c1c6;
-    border-top: 1px solid #b5c1c6;
-}
-
-.home-tabs-left, .home-tabs-right {
-    display: flex;
-    gap: 16px;
-    font-size: 12px;
-}
-
-.home-tab {
-    display: inline-flex;
-    align-items: center;
-    padding: 14px 6px 8px;
-    text-decoration: none;
-    color: #000;
-    border-bottom: 1px solid transparent;
-    line-height: 1.2;
-}
-
-.home-tab:hover {
-    color: #0066cc;
-}
-
-.home-tab.active {
-    border-bottom-color: #333;
-    font-weight: 600;
-}
-
 .home-welcome {
 
     width: 1220px;

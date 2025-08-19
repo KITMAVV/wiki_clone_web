@@ -1,10 +1,10 @@
-import AuthLayout from './AuthLayout';
+import PageLayout from '../PageLayout.jsx';
 import './Auth.css'
 import './Register.css'
 
 export default function Register() {
     return (
-        <AuthLayout>
+        <PageLayout>
             <section className="auth-wrap">
                 <h1 className="auth-title">Створити обліковий запис</h1>
                 <hr className="auth-sep"/>
@@ -73,6 +73,6 @@ export default function Register() {
                     <div className="register-placeholder" aria-hidden="true"></div>
                 </div>
             </section>
-        </AuthLayout>
+        </PageLayout>
     );
 }

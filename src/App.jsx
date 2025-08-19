@@ -3,8 +3,10 @@ import Tests from "./pages/dev/testing_page.jsx";
 import Login from "./pages/Auth/Login.jsx";
 import Register from "./pages/Auth/Register.jsx";
 import HomePage from "./pages/Home/Home.jsx";
+import Profile from "./pages/About/About.jsx"
 
 import styles from "./test.module.css";
+import About from "./pages/About/About.jsx";
 
 
 function Home() {
@@ -16,6 +18,7 @@ function Home() {
             <Link to="/login" className={styles.btn}>2) Login</Link>
             <Link to="/register" className={styles.btn}>3) Register</Link>
             <Link to="/home" className={styles.btn}>4) Home</Link>
+            <Link to="/about" className={styles.btn}>5) About</Link>
         </div>
     );
 }
@@ -29,6 +32,7 @@ export default function App() {
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/home" element={<HomePage/>}/>
+                <Route path="/about" element={<About/>}/>
             </Routes>
         </Router>
     );

@@ -1,0 +1,75 @@
+.page-menu-tools {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 1220px;
+    margin-top: 18px;
+    /*border-bottom: 1px solid #b5c1c6;*/
+    /*border-top: 1px solid #b5c1c6;*/
+}
+
+
+.page-menu-tools::before,
+.page-menu-tools::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #b5c1c6;
+}
+
+.page-menu-tools::before {
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.page-menu-tools::after {
+    bottom: -1px;
+    left: 0;
+    right: 0;
+}
+
+.page-menu-tabs-left, .page-menu-tabs-right {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+}
+
+.page-menu-tab {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 6px 8px;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid transparent;
+    line-height: 1.2;
+}
+
+.page-menu-tab:hover {
+    color: #0066cc;
+}
+
+.page-menu-tab.active {
+    z-index: 1;
+    border-bottom-color: #333;
+    font-weight: 600;
+}
+
+.page-menu-tools-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 6px 8px;
+    background: none;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 1.2;
+}
+
+.page-menu-tools-btn:hover {
+    color: #3366CC;
+}

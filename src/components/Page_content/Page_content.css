@@ -1,0 +1,26 @@
+.toc {
+    position: sticky;
+    top: 72px;
+    align-self: start;
+    width: 220px;
+}
+
+.toc__title {
+    margin: 0 0 14px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.toc__list { margin: 0; padding: 0; list-style: none; }
+.toc__item + .toc__item { }
+
+.toc__link {
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #3366cc;
+    font-weight: 400;
+}
+.toc__link:hover { text-decoration: underline; }
+
+main h2[id], main h3[id] { scroll-margin-top: 80px; }

@@ -1,10 +1,10 @@
-import AuthLayout from './AuthLayout';
+import PageLayout from '../PageLayout.jsx';
 import './Auth.css'
 import './Login.css';
 
 export default function Login() {
     return (
-        <AuthLayout>
+        <PageLayout>
             <section className="auth-wrap">
                 <h1 className="auth-title">Вхід до системи</h1>
                 <hr className="auth-sep" />
@@ -71,6 +71,6 @@ export default function Login() {
                     <div className="login-placeholder" aria-hidden="true"></div>
                 </div>
             </section>
-        </AuthLayout>
+        </PageLayout>
     );
 }
