@@ -1,6 +1,37 @@
 .about-wrap {
+    padding-bottom: 120px;
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 202px 1fr;
     gap: 24px;
     align-items: start;
+}
+
+.about__left {
+    margin-top: 60px;
+}
+
+.about__content {
+    margin-top: 20px;
+}
+
+.about-title {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.about-text {
+    width: 970px;
+    margin-top: 45px;
+}
+
+.about-text p {
+    font-size: 15px;
+    margin-top: 18px;
+}
+
+.about-text h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 24px;
+    border-bottom: 1px #b5c1c6 solid;
 }

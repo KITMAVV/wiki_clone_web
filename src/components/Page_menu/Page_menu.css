@@ -26,9 +26,22 @@
     right: 0;
 }
 
-
 .page-menu-tools::after {
     bottom: -1px;
+    left: 0;
+    right: 0;
+}
+
+.page-menu-tools.long-line {
+    width: 970px;
+    margin-top: 0;
+}
+
+.page-menu-tools.long-line::before{
+    left: -245px;
+    right: 0;
+}
+.page-menu-tools.long-line::after {
     left: 0;
     right: 0;
 }

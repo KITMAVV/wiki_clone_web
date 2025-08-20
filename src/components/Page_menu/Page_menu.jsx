@@ -1,12 +1,11 @@
 import React from "react";
 import './Page_menu.css'
 
-const Page_menu = () => {
+const Page_menu = ({ className = "" }) => {
     return (
-
-        <div className="page-menu-tools">
+        <div className={`page-menu-tools ${className}`}>
             <div className="page-menu-tabs-left">
-                <a href="#" className="page-menu-tab active">Головна</a> {/*ToDo актив штука настроить скрипт джава пон*/}
+                <a href="#" className="page-menu-tab active">Головна</a>
                 <a href="#" className="page-menu-tab">Обговорення</a>
             </div>
             <div className="page-menu-tabs-right">

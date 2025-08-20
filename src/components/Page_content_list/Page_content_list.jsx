@@ -1,5 +1,5 @@
 import React from "react";
-import './Page_content.css'
+import './Page_content_list.css'
 export default function Toc({ title = "Зміст", items = [], className = "" }) {
     if (!items || items.length === 0) return null;
 
