@@ -19,6 +19,13 @@
     font-weight: 700;
 }
 
+.profile-section-title {
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 1px #b5c1c6 solid;
+    margin-bottom: 18px;
+}
+
 /*USER INFO <------------------*/
 
 .profile-user-info {
@@ -90,3 +97,11 @@
     cursor: pointer;
 }
 .profile-btn:hover { background: #2a62a0; }
+
+
+/*Contributions <------------------*/
+
+.profile-user-contributions {
+    margin-top: 60px;
+    width: 970px;
+}

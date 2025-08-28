@@ -3,8 +3,32 @@ import { useParams } from "react-router-dom";
 import PageLayout from '../PageLayout.jsx';
 import Toc from '../../components/Page_content_list/Page_content_list.jsx'
 import Page_menu from "../../components/Page_menu/Page_menu.jsx";
+import DataTable from "../../components/Table_master/Table_master.jsx";
 
 import './UserProfile.css'
+
+
+// тут даные таблицы правок
+const columns = [
+    { key: "id",    title: "№",    style: { width: 90 } },
+    { key: "date",  title: "Дата та час зміни" },
+    { key: "page",  title: "Сторінка" },
+    { key: "description",  title: "Опис внеску", style: { width: 400 } },
+    { key: "status",  title: "Статус зміни" },
+];
+const rows = [
+    { id: 1, date: "2025-08-10 20:31", page: "Албанія / Туризм", description: "Додано інформацію про пляж «пупупу» з описом", status: "Опубліковано" },
+    { id: 2, date: "2025-08-10 20:31", page: "Албанія / Туризм", description: "Додано інформацію про пляж «пупупу» з описом", status: "Опубліковано" },
+    { id: 3, date: "2025-08-10 20:31", page: "Албанія / Туризм", description: "Додано інформацію про пляж «пупупу» з описом", status: "Опубліковано" },
+    { id: 4, date: "2025-08-10 20:31", page: "Албанія / Туризм", description: "Додано інформацію про пляж «пупупу» з описом", status: "Опубліковано" },
+    { id: 5, date: "2025-08-10 20:31", page: "Албанія / Туризм", description: "Додано інформацію про пляж «пупупу» з описом", status: "Опубліковано" },
+    { id: 6, date: "2025-08-10 20:31", page: "Албанія / Туризм", description: "Додано інформацію про пляж «пупупу» з описом", status: "Опубліковано" },
+    { id: 7, date: "2025-08-10 20:31", page: "Албанія / Туризм", description: "Додано інформацію про пляж «пупупу» з описом", status: "Опубліковано" },
+    { id: 8, date: "2025-08-10 20:31", page: "Албанія / Туризм", description: "Додано інформацію про пляж «пупупу» з описом", status: "Опубліковано" },
+    { id: 9, date: "2025-08-10 20:31", page: "Албанія / Туризм", description: "Додано інформацію про пляж «пупупу» з описом", status: "Опубліковано" },
+    { id: 10, date: "2025-08-10 20:31", page: "Албанія / Туризм", description: "Додано інформацію про пляж «пупупу» з описом", status: "Опубліковано" },
+];
+
 
 
 export default function UserProfile() {
@@ -138,6 +162,14 @@ export default function UserProfile() {
                     </section>
 
                     <section id="contributions" className="profile-user-contributions">
+                        <h1 className={"profile-section-title"}>Внески</h1>
+                        <div>
+                            <DataTable columns={columns} rows={rows}/>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h1 className={"profile-section-title"}>Обране</h1>
 
                     </section>
                 </main>
