@@ -101,7 +101,30 @@
 
 /*Contributions <------------------*/
 
-.profile-user-contributions {
+.profile-user-section {
     margin-top: 60px;
     width: 970px;
+}
+
+/*Favorites <------------------*/
+
+.profile-user-favorites {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 970px;
+}
+
+/*Explanation <------------------*/
+
+.profile-explanation {
+    margin-top: 50px;
+    margin-left: 4px;
+    width: 970px;
+}
+
+.profile-explanation p {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.3px;
 }

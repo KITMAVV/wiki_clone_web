@@ -1,0 +1,71 @@
+.favorites-card {
+    width: 970px;
+    height: 175px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 16px;
+    border: 1px solid #b5c1c6;
+    overflow: hidden;
+}
+
+.favorites__img {
+    width: 100%;
+    height: 165px;
+    margin: 4px;
+    object-fit: cover;
+    display: block;
+}
+
+.favorites__body {
+    position: relative;
+    padding: 10px 16px 12px 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    align-items: start;
+}
+
+.favorites__title {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.favorites__meta {
+    font-size: 14px;
+    color: #222;
+}
+
+.favorites__desc {
+    margin-top: 8px;
+    color: #333;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.favorites__actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 7px;
+}
+
+.favorites__btn {
+    border: 1px solid #000000;
+    background: #faed3d;
+    height: 30px;
+    border-radius: 2px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.favorites__btn--delete {
+    border-color: #000000;
+    background: #faed3d;
+}
+
+.favorites__btn:hover {
+    filter: brightness(0.97);
+}

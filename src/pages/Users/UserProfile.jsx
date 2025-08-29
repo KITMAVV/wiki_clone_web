@@ -4,6 +4,9 @@ import PageLayout from '../PageLayout.jsx';
 import Toc from '../../components/Page_content_list/Page_content_list.jsx'
 import Page_menu from "../../components/Page_menu/Page_menu.jsx";
 import DataTable from "../../components/Table_master/Table_master.jsx";
+import FavoritesCard from "./FavoritesCards.jsx";
+
+
 
 import './UserProfile.css'
 
@@ -29,7 +32,35 @@ const rows = [
     { id: 10, date: "2025-08-10 20:31", page: "Албанія / Туризм", description: "Додано інформацію про пляж «пупупу» з описом", status: "Опубліковано" },
 ];
 
-
+const favorites = [
+    {
+        imageUrl:
+            "/placeholder.png",
+        title: "Парки, бари та арт-квартали Албанії",
+        category: "Подорожі / Дозвілля",
+        date: "15.03.2025",
+        description:
+            "Огляд найкращих локацій для прогулянок, відпочинку та культурних подій в Албанії.",
+    },
+    {
+        imageUrl:
+            "/placeholder.png",
+        title: "Гастротур Італією",
+        category: "Їжа / Подорожі",
+        date: "21.03.2025",
+        description:
+            "Дегустації у виноробнях, кулінарні майстер-класи та традиційні ринки.",
+    },
+    {
+        imageUrl:
+            "/placeholder.png",
+        title: "Музейні квартали Відня",
+        category: "Культура / Подорожі",
+        date: "10.04.2025",
+        description:
+            "Гід по музеям сучасного мистецтва та атмосферним кав’ярням поряд.",
+    },
+];
 
 export default function UserProfile() {
     const tocItems = [
@@ -92,7 +123,8 @@ export default function UserProfile() {
                 </aside>
                 <main className="profile__content">
                     <h1 className="profile-title">Користувач: {user.displayName}</h1>
-                    <Page_menu className="long-line" mainTab="Профіль користувача" showDiscussion={false} showHistory={false}/>
+                    <Page_menu className="long-line" mainTab="Профіль користувача" showDiscussion={false}
+                               showHistory={false}/>
                     <section id="user_info" className="profile-user-info">
                         <h1>Інформація користувача</h1>
 
@@ -161,17 +193,37 @@ export default function UserProfile() {
                         </div>
                     </section>
 
-                    <section id="contributions" className="profile-user-contributions">
+                    <section id="contributions" className="profile-user-section">
                         <h1 className={"profile-section-title"}>Внески</h1>
                         <div>
                             <DataTable columns={columns} rows={rows}/>
                         </div>
                     </section>
 
-                    <section>
+                    <section id="favorites" className="profile-user-section">
                         <h1 className={"profile-section-title"}>Обране</h1>
-
+                        <div className={"profile-user-favorites"}>
+                            {favorites.map((item, i) => (
+                                <FavoritesCard
+                                    key={i}
+                                    imageUrl={item.imageUrl}
+                                    title={item.title}
+                                    category={item.category}
+                                    date={item.date}
+                                    description={item.description}
+                                    onOpen={() => console.log("open", item.title)}
+                                    onDelete={() => console.log("delete", item.title)}
+                                />
+                            ))}
+                        </div>
                     </section>
+                    <div className={"profile-explanation"}>
+                    <p>Сторінка профілю користувача містить основну інформацію про учасника спільноти, його внески та
+                        обрані матеріали.</p>
+                    <p>У розділі “Обране” зберігаються статті та сторінки, які користувач позначив для швидкого доступу.</p>
+                    <p>У розділі “Внески” відображається історія створених і відредагованих матеріалів.</p>
+                    <p>Блок “Інформація про користувача” містить особисті відомості, які учасник бажає оприлюднити, а також теми, в яких він спеціалізується або цікавиться.</p>
+                    </div>
                 </main>
             </section>
         </PageLayout>
