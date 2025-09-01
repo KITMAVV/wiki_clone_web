@@ -11,7 +11,9 @@ const Header = () => {
 
                 <Menu />
 
-                <div className="logo-placeholder"/>
+                <div className="logo">
+                    <img src="/logo.png" alt="Logo" draggable="false"/>
+                </div>
 
                 <input
                     type="text"

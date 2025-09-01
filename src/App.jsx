@@ -5,6 +5,7 @@ import Register from "./pages/Auth/Register.jsx";
 import HomePage from "./pages/Home/Home.jsx";
 import About from "./pages/About/About.jsx";
 import UserProfile from "./pages/Users/UserProfile.jsx";
+import Navigation from "./pages/Navigation/Navigation.jsx";
 
 import styles from "./test.module.css";
 
@@ -20,7 +21,9 @@ function Home() {
             <Link to="/register" className={styles.btn}>3) Register</Link>
             <Link to="/home" className={styles.btn}>4) Home</Link>
             <Link to="/about" className={styles.btn}>5) About</Link>
-            <Link to="/users/" className={styles.btn}>6) Profile</Link>
+            <Link to="/users/" className={styles.btn}>6) Profile(/users/vasya)</Link>
+            <Link to="/navigation" className={styles.btn}>7) Navigation</Link>
+
         </div>
     );
 }
@@ -36,6 +39,7 @@ export default function App() {
                 <Route path="/home" element={<HomePage/>}/>
                 <Route path="/about" element={<About/>}/>
                 <Route path="/users/:username" element={<UserProfile />} />
+                <Route path="/navigation" element={<Navigation/>}/>
             </Routes>
         </Router>
     );

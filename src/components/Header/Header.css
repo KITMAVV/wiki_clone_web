@@ -30,14 +30,18 @@
 }
 
 
-.logo-placeholder {
+.logo {
     width: 190px;
-    height: 40px;
-    background-color: #b57878;
-    margin-right: 8px;
-    margin-left: 25px;
+    cursor: pointer;
+    margin-right: 23px;
+    margin-left: 16px;
+    transition: all 0.2s;
+    transform-origin: center;
 }
 
+.logo:hover {
+    transform: scale(1.05);
+}
 
 .search-input {
     width: 360px;
