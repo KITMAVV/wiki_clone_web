@@ -4,7 +4,7 @@
 
     position: relative;
     display: grid;
-    grid-template-columns: 190px 1fr;
+    grid-template-columns: 200px 1fr;
     column-gap: 24px;
     row-gap: 48px;
     width: 970px;
@@ -16,7 +16,7 @@
 .navigation-text-container::before{
     content: "";
     position: absolute;
-    left: 190px;
+    left: 200px;
     top: 10px;
     bottom: 10px;
     width: 1px;
@@ -59,6 +59,20 @@
     margin: 0 0 18px;
 }
 
+.nav-content > p:has(+ ul) {
+    margin-bottom: 0;
+}
 
+.nav-content ul {
+    list-style: inside;
+    padding-left: 10px;
+
+
+}
+
+.nav-content li {
+    font-size: 15px;
+    font-weight: 400;
+}
 
 .nav-content > p:last-child{ margin-bottom: 0; }
