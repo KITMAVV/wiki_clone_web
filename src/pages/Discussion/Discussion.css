@@ -1,0 +1,111 @@
+.discussion-wrap {
+    padding-bottom: 90px;
+    display: grid;
+    grid-template-columns: 202px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.discussion__left {
+    margin-top: 60px;
+}
+
+.discussion__content {
+    margin-top: 20px;
+}
+
+.discussion-title {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.discussion_comments_container {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 970px;
+}
+
+
+
+
+
+
+
+
+.discussion-form {
+    margin-top: 18px;
+    border: 1px solid #b5c1c6;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.discussion-form__field {
+    width: 100%;
+}
+
+.discussion-form__input,
+.discussion-form__textarea {
+    width: 100%;
+    border: 1px solid #4a4a4a;
+    padding: 6px 8px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.discussion-form__toolbar {
+    display: flex;
+    gap: 8px;
+}
+
+.discussion-form__btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.discussion-form__btn--bold {
+    font-weight: bold;
+}
+
+.discussion-form__btn--italic {
+    font-style: italic;
+    font-size: 15px;
+}
+
+.discussion-form__btn--underline {
+    text-decoration: underline;
+}
+
+.discussion-form__note {
+    font-size: 11px;
+    font-weight: 400;
+    color: #000000;
+    margin: 0;
+}
+
+.discussion-form__link {
+    color: #3366cc;
+    text-decoration: underline;
+}
+
+.discussion-form__actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.discussion-form__submit {
+    width: 110px;
+    background: #faed3d;
+    border: 1px solid #4a4a4a;
+    border-radius: 2px;
+    padding: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}

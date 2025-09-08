@@ -1,20 +1,15 @@
-import Header from '../../components/Header/Header.jsx';
-import Footer from '../../components/Footer/Footer.jsx';
+import PageLayout from "../PageLayout.jsx";
 
-
-function Tests() {
+export default function Tests() {
 
     return (
-        <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
-            <Header />
+        <PageLayout>
 
-            <main style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#f9f9f9' }}>
+            <div>TEST</div>
 
-            </main>
-
-            <Footer/>
-        </div>
+        </PageLayout>
     );
 }
 
-export default Tests;
+
+//ToDo - якорьки треба попідключати в TOC(на кожній сторінці). Поки-що необов'язково
