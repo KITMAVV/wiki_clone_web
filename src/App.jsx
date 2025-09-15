@@ -8,6 +8,7 @@ import UserProfile from "./pages/Users/UserProfile.jsx";
 import Navigation from "./pages/Navigation/Navigation.jsx";
 import ContentPage from "./pages/Content/ContentPage.jsx";
 import Discussion from "./pages/Discussion/Discussion.jsx";
+import CreateArticle from "./pages/CreateArticle/CreateArticle.jsx";
 
 import styles from "./test.module.css";
 
@@ -27,6 +28,7 @@ function Home() {
             <Link to="/navigation" className={styles.btn}>7) Navigation</Link>
             <Link to="/content" className={styles.btn}>8) Content</Link>
             <Link to="/discussion" className={styles.btn}>9) Discussion</Link>
+            <Link to="/create-article" className={styles.btn}>10) Create Article</Link>
         </div>
     );
 }
@@ -45,6 +47,7 @@ export default function App() {
                 <Route path="/navigation" element={<Navigation/>}/>
                 <Route path="/content" element={<ContentPage/>}/>
                 <Route path="/discussion" element={<Discussion/>}/>
+                <Route path="/create-article" element={<CreateArticle/>}/>
             </Routes>
         </Router>
     );

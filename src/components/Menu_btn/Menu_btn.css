@@ -47,7 +47,7 @@
 
 
 .menu-nav {
-    max-height: 0;
+    height: 0;
     overflow: hidden;
     position: absolute;
     top: 30px;
@@ -55,11 +55,11 @@
     width: 210px;
     background: rgb(255, 255, 255);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: max-height 0.3s ease;
+    transition: height 0.3s ease;
 }
 
 .menu-nav.active {
-    max-height: 360px;
+    height: 440px;
     max-width: 210px;
     border: 1px solid #4a4a4a;
 }
@@ -91,16 +91,18 @@
 }
 
 .menu-nav li + li {
-    margin-top: 5px;
+    margin-top: 4px;
 }
 
 .menu-nav li a {
     display: block;
     text-align: left;
-    padding: 7px 14px;
+    padding: 3px 14px;
     text-decoration: none;
+    cursor: pointer;
     color: #0336cc;
     font-size: 15px;
+    font-weight: 400;
     transition: background 0.3s, color 0.3s;
     border-radius: 4px;
 }
@@ -111,6 +113,18 @@
 }
 .menu-nav li a:active {
     background-color: #f6f6f6;
+}
+
+ul li:nth-child(7) {
+    position: relative;
+}
+
+ul li:nth-child(7)::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: #ccc;
+    margin: 7px 14px;
 }
 
 .menu-btn,

@@ -1,0 +1,49 @@
+.createArticle-wrap {
+    padding-bottom: 120px;
+    display: grid;
+    grid-template-columns: 202px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.createArticle__left {
+    margin-top: 60px;
+}
+
+.createArticle__content {
+    margin-top: 20px;
+}
+
+.createArticle-title {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.createArticleContent-wrap {
+    width: 970px;
+    margin-top: 30px;
+}
+
+.createArticleContent-wrap p {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.createArticleForm-wrap {
+    margin-top: 7px;
+}
+
+.createArticleForm-tips {
+    margin-top: 30px;
+}
+
+.createArticleForm-tips ul {
+    list-style: inside;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.createArticleForm-tips p {
+    font-size: 15px;
+}
