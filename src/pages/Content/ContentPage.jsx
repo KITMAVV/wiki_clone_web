@@ -6,7 +6,6 @@ import {NavigationTextContainer, NavSection} from "../../components/Nav_section/
 import './ContentPage.css'
 
 export default function ContentPage() {
-    // затичка від chatgpt, не звертай уваги
     const tocItems = [
         { id: "Countries",  label: "Країни та регіони" },
         { id: "CityLocations",  label: "Міські локації" },

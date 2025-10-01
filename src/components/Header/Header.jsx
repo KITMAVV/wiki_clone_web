@@ -1,18 +1,22 @@
 import React from 'react';
 import './Header.css';
 import Menu from '../Menu_btn/Menu_btn.jsx';
+import {Link} from "react-router-dom";
+import {useHideOnScroll} from "../../hooks/useHideOnScroll.jsx";
 
 const Header = () => {
+    const hidden = useHideOnScroll();
     return (
 
-        <header className="header">
-            <div className="blue-line"/>
+        <header className={`header ${hidden ? "hide" : ""}`}>
             <div className="header__left">
 
-                <Menu />
+                <Menu/>
 
                 <div className="logo">
-                    <img src="/logo.png" alt="Logo" draggable="false"/>
+                    <Link to="/home">
+                        <img src="/logo.png" alt="Logo" draggable="false"/>
+                    </Link>
                 </div>
 
                 <input
@@ -25,8 +29,8 @@ const Header = () => {
 
 
             <div className="header__right">
-                <a href="/register">Створити обліковий запис</a>
-                <a href="/Login">Увійти</a>
+                <Link to="/register">Створити обліковий запис</Link>
+                <Link to="/login">Увійти</Link>
             </div>
         </header>
     );

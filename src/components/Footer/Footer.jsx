@@ -1,19 +1,20 @@
 import React from 'react';
 import './Footer.css';
+import {Link} from "react-router-dom";
 
 const Footer = () => {
     return (
 
         <footer className="footer">
             <div className="footer_buttons">
-                <a href="">Політика конфіденційності</a>
-                <a href="">Про WikiTravel</a>
-                <a href="">Відмова від відповідальності</a>
-                <a href="">Зворотній зв’язок</a>
-                <a href="">Кодекс поведінки</a>
-                <a href="">Розробники</a>
-                <a href="">Статистика</a>
-                <a href="">Мобільний вигляд</a>
+                <Link to="">Політика конфіденційності</Link>
+                <Link to="/about">Про WikiTravel</Link>
+                <Link to="">Відмова від відповідальності</Link>
+                <Link to="">Зворотній зв’язок</Link>
+                <Link to="">Кодекс поведінки</Link>
+                <Link to="">Розробники</Link>
+                <Link to="">Статистика</Link>
+                <Link to="">Мобільний вигляд</Link>
             </div>
         </footer>
     );

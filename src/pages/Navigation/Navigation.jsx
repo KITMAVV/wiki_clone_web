@@ -7,7 +7,6 @@ import './Navigation.css'
 
 
 export default function Navigation() {
-    // затичка від chatgpt, не звертай уваги
     const tocItems = [
         { id: "Inhalt",  label: "Вступ" },
         { id: "Search",    label: "Пошук сторінок" },

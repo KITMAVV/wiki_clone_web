@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Menu_btn.css';
+import {Link} from "react-router-dom";
 
 const Menu = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,17 +25,17 @@ const Menu = () => {
             <nav className={`menu-nav${isOpen ? ' active' : ''}`}>
                 <div className="menu-title">Головне меню</div>
                 <ul>
-                    <li><a href="/">Головна сторінка</a></li>
-                    <li><a>Поточні події</a></li>
-                    <li><a>Країни</a></li>
-                    <li><a>Добірка тижня</a></li>
-                    <li><a>Випадкова стаття</a></li>
-                    <li><a>Для подорожі</a></li>
-                    <li><a>Збережені маршрути</a></li>
-                    <li><a>Портал спільноти</a></li>
-                    <li><a>Профіль користувача</a></li>
-                    <li><a>Довідка</a></li>
-                    <li><a>Сторінка для медіа</a></li>
+                    <li><Link to="/home">Головна сторінка</Link></li>
+                    <li><Link to="">Поточні події</Link></li>
+                    <li><Link to="">Країни</Link></li>
+                    <li><Link to="">Добірка тижня</Link></li>
+                    <li><Link to="">Випадкова стаття</Link></li>
+                    <li><Link to="">Для подорожі</Link></li>
+                    <li><Link to="">Збережені маршрути</Link></li>
+                    <li><Link to="">Портал спільноти</Link></li>
+                    <li><Link to="/profile">Профіль користувача</Link></li>
+                    <li><Link to="">Довідка</Link></li>
+                    <li><Link to="">Сторінка для медіа</Link></li>
                 </ul>
             </nav>
         </div>

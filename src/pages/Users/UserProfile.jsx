@@ -11,7 +11,7 @@ import FavoritesCard from "./FavoritesCards.jsx";
 import './UserProfile.css'
 
 
-// тут даные таблицы правок
+// Це є затичкою таблиць, бо поки що немає на бекенді профіля
 const columns = [
     { key: "id",    title: "№",    style: { width: 90 } },
     { key: "date",  title: "Дата та час зміни" },

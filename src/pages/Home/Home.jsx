@@ -4,6 +4,7 @@ import Page_menu from "../../components/Page_menu/Page_menu.jsx";
 import Card from "./Cards.jsx";
 
 import './Home.css'
+import {Link} from "react-router-dom";
 
 function HomePage() {
     return (
@@ -32,13 +33,14 @@ function HomePage() {
                     </div>
 
                     <nav className="home-welcome-tabs">
-                        <a href="#">Про нас</a>
-                        <a href="#">Навігація</a>
-                        <a href="#">Зміст</a>
-                        <a href="#">Створити статтю</a>
-                        <a href="#">Реєстрація</a>
-                        <a href="#">Довідка</a>
-                        <a href="#">Проєкти</a>
+                        <Link to="/about">Про нас</Link>
+                        <Link to="/navigation">Навігація</Link>
+                        <Link to="/content">Зміст</Link>
+                        <Link to="/create-article">Створити статтю</Link>
+                        <Link to="/register">Реєстрація</Link>
+                        <Link to="/help">Довідка</Link>                                        {/*НЕІСНУЄ*/}
+                        <Link to="/projects">Проєкти</Link>                                    {/*НЕІСНУЄ*/}
+                    {/**/}
                     </nav>
                 </section>
 

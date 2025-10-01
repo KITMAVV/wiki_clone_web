@@ -1,8 +1,51 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PageLayout from '../PageLayout.jsx';
-import './Auth.css'
-import './Register.css'
+import { useAuth } from '../../auth/AuthContext.jsx';
+import { register as apiRegister } from '../../api/auth';
+import './Auth.css';
+import './Register.css';
 
 export default function Register() {
+    const navigate = useNavigate();
+    const { signUp } = useAuth() || {};
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [password2, setPassword2] = useState('');
+    const [remember, setRemember] = useState(true);
+    const [loading, setLoading] = useState(false);
+    const [err, setErr] = useState(null);
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        setErr(null);
+
+        if (!name.trim()) return setErr('Введіть ім’я користувача');
+        if (!email.includes('@')) return setErr('Введіть валідний email');
+        if (password.length < 6) return setErr('Пароль має містити щонайменше 6 символів');
+        if (password !== password2) return setErr('Паролі не співпадають');
+
+        setLoading(true);
+        try {
+            const u = typeof signUp === 'function'
+                ? await signUp({ name, email, password }, { remember })
+                : await apiRegister({ name, email, password }, { remember });
+
+            if (u) navigate('/home');
+        } catch (e) {
+            const msg =
+                e?.payload?.message ||
+                e?.payload?.errors?.email?.[0] ||
+                e?.message ||
+                'Помилка реєстрації';
+            setErr(msg);
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <PageLayout>
             <section className="auth-wrap">
@@ -11,12 +54,7 @@ export default function Register() {
 
                 <header className="auth-header">
                     <div className="auth-tools">
-                        <button
-                            className="auth-tools-btn"
-                            type="button"
-                            aria-haspopup="listbox"
-                            aria-expanded="false"
-                        >
+                        <button className="auth-tools-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
                             Інструменти ▾
                         </button>
                     </div>
@@ -25,15 +63,19 @@ export default function Register() {
                 <hr className="auth-sep"/>
 
                 <div className="auth-body">
-                    <form className="auth-form">
+                    <form className="auth-form" onSubmit={onSubmit}>
                         <div className="auth-form-field">
-                            <label htmlFor="username" className="auth-form-label">Ім’я користувача</label>
+                            <label htmlFor="name" className="auth-form-label">Ім’я користувача</label>
                             <input
-                                id="username"
-                                name="username"
+                                id="name"
+                                name="name"
                                 type="text"
                                 className="auth-form-input"
                                 placeholder="Введіть ім’я користувача"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                autoComplete="name"
+                                required
                             />
                         </div>
 
@@ -45,29 +87,67 @@ export default function Register() {
                                 type="password"
                                 className="auth-form-input"
                                 placeholder="Введіть пароль"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                autoComplete="new-password"
+                                required
                             />
-                            <p className={"register-sub-text"}>Рекомендовано використати унікальний пароль</p>
-                            <label htmlFor="check-password" className="auth-form-label">Підтвердити пароль</label>
+
+                            <label htmlFor="password2" className="auth-form-label" style={{marginTop: 8}}>Підтвердити
+                                пароль</label>
                             <input
-                                id="check-password"
-                                name="check-password"
-                                type="check-password"
+                                id="password2"
+                                name="password2"
+                                type="password"
                                 className="auth-form-input"
                                 placeholder="Введіть пароль знову"
+                                value={password2}
+                                onChange={(e) => setPassword2(e.target.value)}
+                                autoComplete="new-password"
+                                required
                             />
+                            <p className="register-sub-text">Рекомендовано використати унікальний пароль</p>
                         </div>
+
                         <div className="auth-form-field">
                             <label htmlFor="email" className="auth-form-label">Електронна пошта</label>
                             <input
                                 id="email"
                                 name="email"
-                                type="text"
+                                type="email"
                                 className="auth-form-input"
                                 placeholder="Введіть вашу адресу електронної пошти"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                autoComplete="email"
+                                required
                             />
-                            <p className={"register-sub-text"}>Електронна пошта потрібна на випадок втрати пароля</p>
+                            <p className="register-sub-text">Електронна пошта потрібна на випадок втрати пароля</p>
                         </div>
-                        <button type="submit" className="auth-submit">Створити</button>
+
+                        <div className="auth-form-row form-remember">
+                            <input
+                                id="remember"
+                                name="remember"
+                                type="checkbox"
+                                className="auth-form-checkbox"
+                                checked={remember}
+                                onChange={(e) => setRemember(e.target.checked)}
+                            />
+                            <label htmlFor="remember" className="auth-form-checkbox-label">
+                                Запам’ятати мене
+                            </label>
+                        </div>
+
+                        <button type="submit" className="auth-submit" disabled={loading}>
+                            {loading ? 'Створюю…' : 'Створити'}
+                        </button>
+
+                        {err && (
+                            <div className="auth-error" role="alert" style={{marginTop: 12}}>
+                                {typeof err === 'string' ? err : JSON.stringify(err)}
+                            </div>
+                        )}
                     </form>
 
                     <div className="register-placeholder" aria-hidden="true"></div>
