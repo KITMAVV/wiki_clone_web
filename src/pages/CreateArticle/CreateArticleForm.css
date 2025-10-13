@@ -37,7 +37,9 @@
 .createArticleForm__actions {
     margin: 16px 0 10px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
     padding: 0 50px 0 30px;
 }
 
@@ -49,4 +51,24 @@
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+
+}
+
+.createArticleForm__btn:hover {
+
+    background: #fff36c;
+}
+
+.createArticleForm-btn-delete {
+    min-width: 35px;
+    height: 35px;
+    background: #fa603d;
+    border: 1px solid #4a4a4a;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.createArticleForm-btn-delete:hover {
+    background: #ff785b;
+    border: 2px #ff0000 solid;
 }

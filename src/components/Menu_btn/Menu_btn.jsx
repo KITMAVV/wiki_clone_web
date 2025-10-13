@@ -33,9 +33,9 @@ const Menu = () => {
                     <li><Link to="">Для подорожі</Link></li>
                     <li><Link to="">Збережені маршрути</Link></li>
                     <li><Link to="">Портал спільноти</Link></li>
-                    <li><Link to="/profile">Профіль користувача</Link></li>
-                    <li><Link to="">Довідка</Link></li>
-                    <li><Link to="">Сторінка для медіа</Link></li>
+                    <li><Link to="/users/petya">Профіль користувача</Link></li>
+                    <li><Link to="/dev">Довідка</Link></li>
+                    <li><Link to="/test">Сторінка для медіа</Link></li>
                 </ul>
             </nav>
         </div>

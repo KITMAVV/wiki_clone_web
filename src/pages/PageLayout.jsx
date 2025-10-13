@@ -1,7 +1,7 @@
 import Header from '../components/Header/Header.jsx';
 import Footer from '../components/Footer/Footer.jsx';
 
-function PageLayout({ children }) {
+function PageLayout({ children, lastEdited }) {
     return (
         <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
             <Header />
@@ -10,7 +10,7 @@ function PageLayout({ children }) {
                 {children}
             </main>
 
-            <Footer />
+            <Footer lastEdited={lastEdited} />
         </div>
     );
 }

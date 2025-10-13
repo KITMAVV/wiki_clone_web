@@ -13,13 +13,14 @@ import Discussion from "../pages/Discussion/Discussion.jsx";
 import CreateArticle from "../pages/CreateArticle/CreateArticle.jsx";
 import AuthStatus from "../pages/dev/test_playground.jsx";
 import ScrollManager from "./ScrollManager.jsx";
+import PreviewCreatedArticle from "../pages/CreateArticle/ArticlePreview.jsx";
 function NotFound() {
     return (
         <div style={{padding: 24}}>
             <h1>404 — Нот Фаунд</h1>
             <p>Перевір URL або повернись на <a href="/home">головну</a>.</p>
         </div>
-    );
+    ); //Todo додати окрему сторінку для помилок і тп
 }
 
 export default function AppRouter() {
@@ -44,7 +45,7 @@ export default function AppRouter() {
                 <Route path="/content" element={<ContentPage/>} />
                 <Route path="/discussion" element={<Discussion/>} />
                 <Route path="/create-article" element={<CreateArticle/>} />
-
+                <Route path="/create-article/preview" element={<PreviewCreatedArticle/>} />
 
                 <Route path="*" element={<NotFound/>} />
             </Routes>

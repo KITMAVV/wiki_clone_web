@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 
 import PageLayout from '../PageLayout.jsx';
-import Toc from '../../components/Page_content_list/Page_content_list.jsx'
+import Toc from '../../components/ToC/ToC.jsx'
 import Page_menu from "../../components/Page_menu/Page_menu.jsx";
 import DataTable from "../../components/Table_master/Table_master.jsx";
 import FavoritesCard from "./FavoritesCards.jsx";
@@ -35,7 +35,7 @@ const rows = [
 const favorites = [
     {
         imageUrl:
-            "/placeholder.png",
+            "https://picsum.photos/seed/1221313122/400/300",
         title: "Парки, бари та арт-квартали Албанії",
         category: "Подорожі / Дозвілля",
         date: "15.03.2025",
@@ -44,7 +44,7 @@ const favorites = [
     },
     {
         imageUrl:
-            "/placeholder.png",
+            "https://picsum.photos/seed/81222/400/300",
         title: "Гастротур Італією",
         category: "Їжа / Подорожі",
         date: "21.03.2025",
@@ -53,7 +53,7 @@ const favorites = [
     },
     {
         imageUrl:
-            "/placeholder.png",
+            "https://picsum.photos/seed/12212/400/300",
         title: "Музейні квартали Відня",
         category: "Культура / Подорожі",
         date: "10.04.2025",

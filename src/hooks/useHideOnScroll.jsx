@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 
-export function useHideOnScroll(deadZone = 25, topThreshold = 50) {
+export function useHideOnScroll(deadZone = 10, topThreshold = 30) {
     const [hidden, setHidden] = useState(false);
     const lastYRef = useRef(typeof window !== "undefined" ? window.scrollY : 0);
 

@@ -8,11 +8,11 @@ export function NavigationTextContainer({ children }) {
     );
 }
 
-export function NavSection({ title, children }) {
+export function NavSection({ title, children, id }) {
     return (
         <>
             <div className="nav-label">
-                <h2 className="nav-title">{title}</h2>
+                <h2 id={id} className="nav-title">{title}</h2>
             </div>
             <div className="nav-content">{children}</div>
         </>

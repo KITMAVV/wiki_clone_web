@@ -103,29 +103,35 @@
     color: #0336cc;
     font-size: 15px;
     font-weight: 400;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s, scale 0.1s;
     border-radius: 4px;
 }
 
 .menu-nav li a:hover {
     background-color: #f3f2f2;
     text-decoration: underline;
+    scale: 1.05;
 }
 
 .menu-nav li a:active {
     background: none;
 }
-ul li:nth-child(7) {
+
+
+
+.menu-nav li:nth-child(7) {
     position: relative;
 }
 
-ul li:nth-child(7)::after {
+.menu-nav li:nth-child(7)::after {
     content: "";
     display: block;
     height: 1px;
     background: #ccc;
     margin: 7px 14px;
 }
+
+
 
 .menu-btn,
 .menu-nav li a {

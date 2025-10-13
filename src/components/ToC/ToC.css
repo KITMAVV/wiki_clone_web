@@ -1,8 +1,13 @@
 .toc {
-    position: sticky;
-    top: 72px;
+    position: fixed;
+    top: 150px;
     align-self: start;
     width: 220px;
+    transition: top 250ms;
+}
+
+.toc.moved {
+    top: 125px;
 }
 
 .toc__title {
@@ -23,4 +28,4 @@
 }
 .toc__link:hover { text-decoration: underline; }
 
-main h2[id], main h3[id] { scroll-margin-top: 80px; }
+main h2[id], main h3[id] { scroll-margin-top: 95px; }

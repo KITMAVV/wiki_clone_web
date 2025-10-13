@@ -1,5 +1,5 @@
 import PageLayout from "../PageLayout.jsx";
-import Toc from '../../components/Page_content_list/Page_content_list.jsx'
+import Toc from '../../components/ToC/ToC.jsx'
 import Page_menu from "../../components/Page_menu/Page_menu.jsx";
 import CreateArticleForm from "./CreateArticleForm.jsx";
 
