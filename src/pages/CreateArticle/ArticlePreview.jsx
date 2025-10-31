@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import PageLayout from "../PageLayout.jsx";
 import Toc from "../../components/ToC/ToC.jsx";
 import Page_menu from "../../components/Page_menu/Page_menu.jsx";
-import MarkdownViewer from "./MarkdownViewer.jsx";
+import MarkdownViewer from "../../components/MarkdownViewer/MarkdownViewer.jsx";
 import "./CreateArticle.css";
 
 export default function PreviewCreatedArticle() {

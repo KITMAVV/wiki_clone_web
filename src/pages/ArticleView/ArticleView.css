@@ -1,0 +1,25 @@
+.ArticleView-wrap {
+    padding-bottom: 120px;
+    display: grid;
+    grid-template-columns: 202px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.ArticleView__left {
+    margin-top: 60px;
+}
+
+.ArticleView__content {
+    margin-top: 20px;
+}
+
+.ArticleView-title {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.ArticleViewContent-wrap {
+    width: 970px;
+    margin-top: 30px;
+}

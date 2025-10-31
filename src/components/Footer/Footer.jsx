@@ -64,7 +64,7 @@ const Footer = ({ lastEdited }) => {
 
 export default Footer;
 
-// ПРИКЛАД ВИКОРИСТАННЯ ДЛЯ ДАТИ(1 - напряму / 2 - PageLayout):
+// ПРИКЛАД ВИКОРИСТАННЯ для дати(1 - напряму / 2 - PageLayout):
 //
 // const time = '2025-04-24T14:42:00+03:00';
 // ...

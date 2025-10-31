@@ -36,5 +36,5 @@ const Page_menu = ({ className = "", mainTab = "Головна", showDiscussion 
 export default Page_menu;
 
 
-// Приклад використання компонента(*за замовчуванням всі кнопки увімкнуті):
+// ПРИКЛАД ВИКОРИСТАННЯ компонента(*за замовчуванням всі кнопки увімкнуті):
 // <Page_menu className="long-line" mainTab="Стаття" showDiscussion={false} showRead={false} showCode={false} showHistory={false} />

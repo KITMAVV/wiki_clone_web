@@ -35,21 +35,23 @@ export default function WikiArticle({ markdown, enableTables=true, components={}
     };
 
     return (
-        <ReactMarkdown
-            remarkPlugins={enableTables ? [remarkGfm] : []}
-            rehypePlugins={[
-                rehypeSlug,
-                [rehypeSanitize, sanitizeSchema]
-            ]}
-            skipHtml
-            allowedElements={enableTables
-                ? ["h2","h3","p","img","table","thead","tbody","tr","th","td"]
-                : ["h2","h3","p","img"]
-            }
-            unwrapDisallowed
-            components={{ ...baseComponents, ...components }}
-        >
-            {markdown}
-        </ReactMarkdown>
+        <div class="md-wiki-article">
+            <ReactMarkdown
+                remarkPlugins={enableTables ? [remarkGfm] : []}
+                rehypePlugins={[
+                    rehypeSlug,
+                    [rehypeSanitize, sanitizeSchema]
+                ]}
+                skipHtml
+                allowedElements={enableTables
+                    ? ["h2","h3","p","img","table","thead","tbody","tr","th","td"]
+                    : ["h2","h3","p","img"]
+                }
+                unwrapDisallowed
+                components={{ ...baseComponents, ...components }}
+            >
+                {markdown}
+            </ReactMarkdown>
+        </div>
     );
 }

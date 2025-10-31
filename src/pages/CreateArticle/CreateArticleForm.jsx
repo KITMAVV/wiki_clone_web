@@ -4,7 +4,7 @@ import { useDraft } from "../../hooks/useDraft.js";
 
 const DRAFT_KEY = "createArticle:draft";
 
-export default function CreateArticleForm() {
+export default function CreateArticleForm({onSubmit, submitting = false}) {
     const nav = useNavigate();
 
     const { values, setValues, clearDraft } = useDraft(DRAFT_KEY, {
@@ -33,9 +33,11 @@ export default function CreateArticleForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        clearDraft();
-        setValues({ title: "", category: "", body: "" });
-        alert("Статтю створено. Чернетку очищено");
+        const ok = await onSubmit?.({ title, body, category });
+        if (ok) {
+            clearDraft();
+            setValues({ title: "", category: "", body: "" });
+        }
     };
 
     return (
@@ -90,8 +92,8 @@ export default function CreateArticleForm() {
                 <button type="button" className="createArticleForm-btn-delete" onClick={handleDelete}>
                     X
                 </button>
-                <button type="submit" className="createArticleForm__btn">
-                    Опублікувати
+                <button type="submit" disabled={submitting} className="createArticleForm__btn">
+                    {submitting ? "Зберігаю..." : "Опублікувати"}
                 </button>
             </div>
         </form>

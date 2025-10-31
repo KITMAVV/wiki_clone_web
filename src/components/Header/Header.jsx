@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './Header.css';
 import Menu from '../Menu_btn/Menu_btn.jsx';
+import Search from "../Search/Search.jsx";
 import { Link, useNavigate } from "react-router-dom";
 import { useHideOnScroll } from "../../hooks/useHideOnScroll.jsx";
 import { useAuth } from "../../auth/AuthContext.jsx";
@@ -55,12 +56,7 @@ const Header = () => {
                     </Link>
                 </div>
 
-                <input
-                    type="text"
-                    className="search-input"
-                    placeholder="Пошук у WikiTravel"
-                />
-                <button className="search-button">Знайти</button>
+                <Search />
             </div>
 
 
