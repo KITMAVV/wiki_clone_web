@@ -15,6 +15,7 @@ import AuthStatus from "../pages/dev/test_playground.jsx";
 import ScrollManager from "./ScrollManager.jsx";
 import PreviewCreatedArticle from "../pages/CreateArticle/ArticlePreview.jsx";
 import ArticleView from "../pages/ArticleView/ArticleView.jsx";
+import ViewSource from "../pages/ViewSource/ViewSource.jsx";
 function NotFound() {
     return (
         <div style={{padding: 24}}>
@@ -45,6 +46,7 @@ export default function AppRouter() {
                 <Route path="/navigation" element={<Navigation/>} />
                 <Route path="/content" element={<ContentPage/>} />
                 <Route path="/discussion" element={<Discussion/>} />
+                <Route path="/w/:action/:slug" element={<ViewSource/>} />
 
                 <Route path="/create-article" element={<CreateArticle/>} />
                 <Route path="/create-article/preview" element={<PreviewCreatedArticle/>} />

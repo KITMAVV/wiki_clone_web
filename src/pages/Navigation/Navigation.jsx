@@ -3,7 +3,7 @@ import Toc from '../../components/ToC/ToC.jsx'
 import Page_menu from "../../components/Page_menu/Page_menu.jsx";
 import {NavigationTextContainer, NavSection} from "../../components/Nav_section/Nav_section.jsx";
 
-import './Navigation.css'
+import '../shared.css'
 
 
 export default function Navigation() {
@@ -15,12 +15,12 @@ export default function Navigation() {
     ];
     return (
         <PageLayout>
-            <section className={"navigation-wrap"}>
-                <aside className="navigation__left">
+            <section className={"shared-wrap"}>
+                <aside className="shared__left">
                     <Toc items={tocItems}/>
                 </aside>
-                <main className="navigation__content">
-                    <h1 className={"navigation-title"}>Довідка: Як орієнтуватися у WikiTravel</h1>
+                <main className="shared__content">
+                    <h1 className={"shared-title"}>Довідка: Як орієнтуватися у WikiTravel</h1>
                     <Page_menu className="long-line" mainTab="Сторінка проєкту"/>
 
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useEffect, useRef, useState} from "react";
 import { useParams } from "react-router-dom";
 
 import PageLayout from "../PageLayout.jsx";
@@ -9,7 +9,7 @@ import ErrorPage from "../ErrorPage/ErrorPage.jsx";
 
 import { fetchPageBySlug } from "../../api/pages.js";
 
-import "./ArticleView.css"
+import '../shared.css'
 
 export default function ArticleView() {
     const { slug } = useParams();
@@ -18,6 +18,7 @@ export default function ArticleView() {
     const [tocItems, setTocItems] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const contentRef = useRef(null);
 
     useEffect(() => {
         if (!slug) return;
@@ -33,34 +34,35 @@ export default function ArticleView() {
     useEffect(() => {
         if (!page?.content) return;
 
-        const t = setTimeout(() => {
-            const root = document.querySelector(".ArticleViewContent-wrap");
+        const raf = requestAnimationFrame(() => {
+            const root = contentRef.current;
             if (!root) return;
+
             const heads = root.querySelectorAll("h1[id], h2[id], h3[id]");
-            const items = Array.from(heads).map((h) => ({
+            const items = Array.from(heads).map(h => ({
                 id: h.id,
                 label: h.textContent?.trim() || "",
             }));
             setTocItems(items);
-        }, 0);
+        });
 
-        return () => clearTimeout(t);
+        return () => cancelAnimationFrame(raf);
     }, [page?.content]);
 
     if (loading) {
         return (
             <PageLayout>
-                <section className="ArticleView-wrap">
-                    <aside className="ArticleView__left">
+                <section className="shared-wrap">
+                    <aside className="shared__left">
                         <div>...</div>
                     </aside>
 
-                    <main className="ArticleView__content">
-                        <h1 className="ArticleView-title">Завантаження...</h1>
+                    <main className="shared__content">
+                        <h1 className="shared-title">Завантаження...</h1>
 
                         <Page_menu className="long-line" mainTab="Завантаження..." showDiscussion={false} showHistory={false} showCode={false}/>
 
-                        <section className="ArticleViewContent-wrap">
+                        <section style={{ width: "970px", marginTop: "30px", }}>
                             <div>Завантаження...</div>
                         </section>
                     </main>
@@ -94,18 +96,19 @@ export default function ArticleView() {
 
     return (
         <PageLayout>
-            <section className="ArticleView-wrap">
-                <aside className="ArticleView__left">
+            <section className="shared-wrap">
+                <aside className="shared__left">
                     <Toc items={tocItems} />
                 </aside>
 
-                <main className="ArticleView__content">
-                    <h1 className="ArticleView-title">{title}</h1>
+                <main className="shared__content">
+                    <h1 className="shared-title">{title}</h1>
 
-                    <Page_menu className="long-line" mainTab={title}/>
+                    {/*<Page_menu className="long-line" mainTab={title}/>*/}
+                    <Page_menu className="long-line" mainTab="Стаття"/>
 
-                    <section className="ArticleViewContent-wrap">
-                        <MarkdownViewer markdown={markdown} enableTables />
+                    <section ref={contentRef} style={{width: "970px", marginTop: "30px",}}>
+                        <MarkdownViewer markdown={markdown} enableTables/>
                     </section>
                 </main>
             </section>

@@ -3,7 +3,7 @@ import Toc from '../../components/ToC/ToC.jsx'
 import Page_menu from "../../components/Page_menu/Page_menu.jsx";
 import {NavigationTextContainer, NavSection} from "../../components/Nav_section/Nav_section.jsx";
 
-import './ContentPage.css'
+import '../shared.css'
 
 export default function ContentPage() {
     const tocItems = [
@@ -18,12 +18,12 @@ export default function ContentPage() {
     ];
     return (
         <PageLayout>
-            <section className={"content-wrap"}>
-                <aside className="content__left">
+            <section className={"shared-wrap"}>
+                <aside className="shared__left">
                     <Toc items={tocItems}/>
                 </aside>
-                <main className="content__content">
-                    <h1 className={"content-title"}>Портал: Вміст</h1>
+                <main className="shared__content">
+                    <h1 className={"shared-title"}>Портал: Вміст</h1>
                     <Page_menu className="long-line" mainTab="Сторінка проєкту"/>
 
 

@@ -3,6 +3,7 @@ import Toc from '../../components/ToC/ToC.jsx'
 import Page_menu from "../../components/Page_menu/Page_menu.jsx";
 
 import './About.css'
+import '../shared.css'
 
 export default function About() {
     const tocItems = [
@@ -12,12 +13,12 @@ export default function About() {
     ];
     return (
         <PageLayout>
-            <section className={"about-wrap"}>
-                <aside className="about__left">
+            <section className={"shared-wrap"}>
+                <aside className="shared__left">
                     <Toc items={tocItems}/>
                 </aside>
-                <main className="about__content">
-                    <h1 className={"about-title"} id={"Wiki"}>WikiTravel: Про нас</h1>
+                <main className="shared__content">
+                    <h1 className={"shared-title"} id={"Wiki"}>WikiTravel: Про нас</h1>
                     <Page_menu className="long-line" />
                     <section className={"about-text"}>
                         <p>WikiTravel — це відкрита платформа для мандрівників, де кожен може ділитися особистим

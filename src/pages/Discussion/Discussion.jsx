@@ -4,6 +4,7 @@ import Page_menu from "../../components/Page_menu/Page_menu.jsx";
 import Comment from "./Comment.jsx";
 
 import './Discussion.css'
+import '../shared.css'
 
 export default function Discussion() {
     const tocItems = [
@@ -35,14 +36,14 @@ export default function Discussion() {
 
     return (
         <PageLayout>
-            <section className={"discussion-wrap"}>
-                <aside className="discussion__left">
+            <section className={"shared-wrap"}>
+                <aside className="shared__left">
                     <Toc items={tocItems}/>
                 </aside>
 
-                <main className="discussion__content">
+                <main className="shared__content">
 
-                    <h1 className={"discussion-title"}>{fakeData.title}</h1>
+                    <h1 className={"shared-title"}>{fakeData.title}</h1>
                     <Page_menu className="long-line" mainTab="Стаття"/>
 
                     <div className={"discussion_comments_container"}>

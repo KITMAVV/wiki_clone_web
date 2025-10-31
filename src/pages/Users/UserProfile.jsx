@@ -9,7 +9,7 @@ import FavoritesCard from "./FavoritesCards.jsx";
 
 
 import './UserProfile.css'
-
+import '../shared.css'
 
 // Це є затичкою таблиць, бо поки що немає на бекенді профіля
 const columns = [
@@ -117,12 +117,12 @@ export default function UserProfile() {
 
     return (
         <PageLayout>
-            <section className={"profile-wrap"}>
-                <aside className="profile__left">
+            <section className={"shared-wrap"}>
+                <aside className="shared__left">
                     <Toc items={tocItems}/>
                 </aside>
-                <main className="profile__content">
-                    <h1 className="profile-title">Користувач: {user.displayName}</h1>
+                <main className="shared__content">
+                    <h1 className="shared-title">Користувач: {user.displayName}</h1>
                     <Page_menu className="long-line" mainTab="Профіль користувача" showDiscussion={false}
                                showHistory={false}/>
                     <section id="user_info" className="profile-user-info">

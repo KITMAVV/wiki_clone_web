@@ -6,6 +6,7 @@ import Page_menu from "../../components/Page_menu/Page_menu.jsx";
 import CreateArticleForm from "./CreateArticleForm.jsx";
 
 import './CreateArticle.css'
+import '../shared.css'
 
 import {createPage} from "../../api/pages.js";
 
@@ -54,16 +55,16 @@ export default function CreateArticle() {
 
     return (
         <PageLayout>
-            <section className={"createArticle-wrap"}>
-                <aside className="createArticle__left">
+            <section className={"shared-wrap"}>
+                <aside className="shared__left">
                     <Toc items={tocItems}/>
                 </aside>
 
 
 
-                <main className="createArticle__content">
+                <main className="shared__content">
 
-                    <h1 id={"createArticle"} className={"createArticle-title"}>Створити статтю</h1>
+                    <h1 id={"createArticle"} className={"shared-title"}>Створити статтю</h1>
                     <Page_menu className="long-line" mainTab="Створення статті"/>
                     <section className={"createArticleContent-wrap"}>
 

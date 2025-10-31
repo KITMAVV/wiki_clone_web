@@ -1,0 +1,48 @@
+.source-hint {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    opacity: 0.8;
+    display: block;
+}
+
+.source-textarea {
+    margin-top: 5px;
+    width: 100%;
+    height: 35vh;
+    min-height: 10vh;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 14px;
+    border: 1px solid #121212;
+    outline: none;
+    resize: vertical;
+    background: #4a4a4a;
+    color: #ffec3d;
+    overflow: auto;
+}
+
+
+.source-empty {
+    margin: 8px 0 16px;
+    opacity: 0.8;
+}
+
+.source__button {
+    background: #e5ecff;
+    color: #3366cc;
+    font-size: 1rem;
+    padding: 0.6rem 1.8rem;
+    border: 1px #3366cc solid;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: background 0.2s, scale 0.2s;
+}
+
+.source__button:hover {
+    background: #3366cc;
+    color: white;
+    scale: 1.1;
+    border-radius: 3px;
+}

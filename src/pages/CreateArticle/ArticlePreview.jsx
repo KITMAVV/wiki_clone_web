@@ -4,7 +4,9 @@ import PageLayout from "../PageLayout.jsx";
 import Toc from "../../components/ToC/ToC.jsx";
 import Page_menu from "../../components/Page_menu/Page_menu.jsx";
 import MarkdownViewer from "../../components/MarkdownViewer/MarkdownViewer.jsx";
+
 import "./CreateArticle.css";
+import '../shared.css'
 
 export default function PreviewCreatedArticle() {
     const { state } = useLocation();
@@ -42,13 +44,13 @@ export default function PreviewCreatedArticle() {
 
     return (
         <PageLayout>
-            <section className="createArticle-wrap">
-                <aside className="createArticle__left">
+            <section className="shared-wrap">
+                <aside className="shared__left">
                     <Toc items={tocItems} />
                 </aside>
 
-                <main className="createArticle__content">
-                    <h1 className="createArticle-title">
+                <main className="shared__content">
+                    <h1 className="shared-title">
                         {data.title || "Тут буде назва статті"}
                     </h1>
                     <Page_menu className="long-line" mainTab="Створення статті" showDiscussion={false}  showHistory={false} />
