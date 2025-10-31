@@ -33,6 +33,7 @@
 
 
 .search-dropdown {
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -47,6 +48,10 @@
     max-height: 235px;
     overflow-y: auto;
     z-index: 1000;
+}
+
+.search:focus-within .search-dropdown {
+    display: block;
 }
 
 .search-dropdown__item {
