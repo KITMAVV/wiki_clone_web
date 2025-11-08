@@ -1,0 +1,19 @@
+.history-section {
+    width: 970px;
+    margin-top: 15px;
+}
+
+.history-error {
+    color: #b00020;
+}
+
+.history-empty {
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.45;
+    color: #555;
+    padding: 12px;
+}

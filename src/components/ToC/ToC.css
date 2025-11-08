@@ -3,11 +3,11 @@
     top: 150px;
     align-self: start;
     width: 220px;
-    transition: top 250ms;
+    transition: top 130ms;
 }
 
 .toc.moved {
-    top: 125px;
+    top: 115px;
 }
 
 .toc__title {

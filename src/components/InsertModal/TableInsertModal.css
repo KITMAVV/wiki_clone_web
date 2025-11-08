@@ -1,0 +1,119 @@
+.tablemodal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.tablemodal {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    border: 1px solid #4a4a4a;
+    padding: 14px;
+    min-width: 520px;
+    max-width: 860px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.tablemodal-title {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.tablemodal-body {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tablemodal-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 2px;
+}
+.tablemodal-col { flex: 1; }
+
+.tablemodal-inline {
+    display: inline-flex;
+    width: 230px;
+    align-items: center;
+    gap: 6px;
+}
+
+.tablemodal-label {
+    display: block;
+    font-size: 15px;
+    margin: 8px 0 4px;
+    color: #222;
+}
+.tablemodal-label--spaced { margin-top: 2px; }
+
+.tablemodal-input {
+    width: 100%;
+    border: none;
+    height: 20px;
+    padding: 0 9px;
+    font-size: 14px;
+    line-height: 20px;
+    outline: none;
+    background: #f7f7f7;
+}
+
+
+.tablemodal-preview {
+    height: 140px;
+    resize: vertical;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    line-height: 1.4;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+
+.tablemodal-tableWrap {
+    overflow: auto;
+    border: 1px solid #e5e8eb;
+    max-height: 40vh;
+}
+.tablemodal-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tablemodal-table th,
+.tablemodal-table td {
+    border: 1px solid #e5e8eb;
+    padding: 4px;
+}
+.tablemodal-table input.tablemodal-input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tablemodal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.tablemodal-btn {
+    background: #faed3d;
+    border: 1px solid #4a4a4a;
+    border-radius: 2px;
+    padding: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 30px;
+}
+.tablemodal-btn:hover { background: #fff36c; }

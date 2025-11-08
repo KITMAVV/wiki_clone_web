@@ -53,11 +53,8 @@ export default function ViewSource() {
 
                     <Page_menu className="long-line" mainTab={cached.mainTab} active={['main', 'code']}/>
 
-                    <label className="source-hint" htmlFor="source-textarea">
-                        Ви можете переглядати та скопіювати код цієї сторінки.
-                    </label>
 
-                    <h2 className="visually-hidden">Код сторінки</h2>
+                    <h2 className="source-label">Код сторінки</h2>
 
                     <textarea
                         id="source-textarea"
@@ -67,6 +64,10 @@ export default function ViewSource() {
                         wrap="off"
                         value={cached.html}
                     />
+
+                    <label className="source-hint" htmlFor="source-textarea">
+                        Ви можете переглядати та скопіювати код цієї сторінки.
+                    </label>
                 </main>
             </section>
         </PageLayout>

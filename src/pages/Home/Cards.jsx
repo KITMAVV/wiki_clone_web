@@ -1,6 +1,20 @@
 import './Cards.css'
 
-export default function Card({ title, text, imageUrl, alt = '', ctaText = 'Button text', ctaHref = '#', linkText = 'Link text', linkHref = '#', variant = 'default', imageSize = 'sm', hideLink = false, className = '' }) {
+export default function Card({
+                                 title,
+                                 text,
+                                 imageUrl,
+                                 alt = '',
+
+                                 ctaText,
+                                 ctaHref,
+                                 linkText,
+                                 linkHref,
+                                 variant = 'default',
+                                 imageSize = 'sm',
+                                 hideLink = false,
+                                 className = ''
+                             }) {
     const mods = [
         variant === 'imageTop' ? 'card--image-top' : '',
         `card--img-${imageSize}`,
@@ -14,6 +28,11 @@ export default function Card({ title, text, imageUrl, alt = '', ctaText = 'Butto
     const listItems = isList
         ? (Array.isArray(text) ? text : String(text || '').split(/\r?\n+/)).filter(Boolean)
         : []
+
+    // условия показа
+    const showBtn = Boolean(ctaText && ctaHref)
+    const showLink = !hideLink && Boolean(linkText && linkHref)
+    const showFooter = showBtn || showLink
 
     return (
         <article className={`card ${mods} ${className}`}>
@@ -35,12 +54,16 @@ export default function Card({ title, text, imageUrl, alt = '', ctaText = 'Butto
                 )}
             </div>
 
-            <footer className="card__footer">
-                <a className="card__btn" href={ctaHref}>{ctaText}</a>
-                {!hideLink && (
-                    <a className="card__link" href={linkHref}>{linkText}</a>
-                )}
-            </footer>
+            {showFooter && (
+                <footer className="card__footer">
+                    {showBtn && (
+                        <a className="card__btn" href={ctaHref}>{ctaText}</a>
+                    )}
+                    {showLink && (
+                        <a className="card__link" href={linkHref}>{linkText}</a>
+                    )}
+                </footer>
+            )}
         </article>
     )
 }

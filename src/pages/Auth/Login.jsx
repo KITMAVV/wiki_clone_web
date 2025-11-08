@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PageLayout from '../PageLayout.jsx';
 import { useAuth } from '../../auth/AuthContext.jsx';
 import { login as apiLogin } from '../../api/auth';
 import './Auth.css';
 import './Login.css';
+import DropInstrumentsButton from "../../components/DropInstrumentsButton/DropInstrumentsButton.jsx";
 
 
 export default function Login() {
@@ -60,14 +61,7 @@ export default function Login() {
 
                 <header className="auth-header">
                     <div className="auth-tools">
-                        <button
-                            className="auth-tools-btn"
-                            type="button"
-                            aria-haspopup="listbox"
-                            aria-expanded="false"
-                        >
-                            Інструменти ▾
-                        </button>
+                        <DropInstrumentsButton/>
                     </div>
                 </header>
 
@@ -135,7 +129,29 @@ export default function Login() {
                         </nav>
                     </form>
 
-                    <div className="login-placeholder" aria-hidden="true"></div>
+                    <svg
+                        className="login-logo"
+                        aria-hidden="true"
+                        width="217"
+                        height="175"
+                        viewBox="0 0 217 175"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <g clipPath="url(#clip0_112_1553)">
+                            <path d="M68.2402 64.67V174.15H109.46V59L68.2402 64.67Z" fill="black"/>
+                            <path
+                                d="M191.7 0L24.1499 26.64V63.53L67.0599 57.62L108.28 51.95L195.22 39.98L216.68 16.75L191.7 0Z"
+                                fill="#575756"/>
+                            <path d="M113.62 87.41L19.99 73.3L0 89.47L15.87 111.52L113.62 121.45V87.41Z"
+                                  fill="#E9E335"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_112_1553">
+                                <rect width="216.68" height="174.15" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
                 </div>
             </section>
         </PageLayout>

@@ -11,12 +11,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 1220px;
     height: 65px;
-    background: #ccc;
     margin-top: 15px;
-    border: black 1px solid;
 }
 
 .home-welcome {
@@ -83,4 +80,10 @@
     gap: 20px;
 }
 
-
+.quicklink__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    color: black;
+}

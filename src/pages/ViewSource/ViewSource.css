@@ -10,7 +10,7 @@
     margin-top: 5px;
     width: 100%;
     height: 35vh;
-    min-height: 10vh;
+    min-height: 15vh;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: 13px;
     line-height: 1.5;
@@ -45,4 +45,10 @@
     color: white;
     scale: 1.1;
     border-radius: 3px;
+}
+
+.source-label {
+    font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
 }

@@ -4,7 +4,7 @@
     border: 1px solid #b5c1c6;
     border-top: 4px solid #4a4a4a;
     border-radius: 2px;
-    padding: 16px;
+    padding: 18px;
     background: #fff;
 }
 .card__body {
@@ -37,7 +37,7 @@
 
 .card__footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     margin-top: 8px;
     padding-top: 8px;
@@ -45,6 +45,7 @@
 }
 .card__btn {
     display: inline-block;
+    margin-right: auto;
     height: 30px;
     padding: 3px 10px;
     font-weight: 700;

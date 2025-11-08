@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PageLayout from '../PageLayout.jsx';
 import { useAuth } from '../../auth/AuthContext.jsx';
 import { register as apiRegister } from '../../api/auth';
+import DropInstrumentsButton from "../../components/DropInstrumentsButton/DropInstrumentsButton.jsx";
 import './Auth.css';
 import './Register.css';
 
@@ -54,9 +55,7 @@ export default function Register() {
 
                 <header className="auth-header">
                     <div className="auth-tools">
-                        <button className="auth-tools-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
-                            Інструменти ▾
-                        </button>
+                        <DropInstrumentsButton/>
                     </div>
                 </header>
 
@@ -150,7 +149,12 @@ export default function Register() {
                         )}
                     </form>
 
-                    <div className="register-placeholder" aria-hidden="true"></div>
+                    <img
+                        className="register-logo"
+                        src="/register-logo.png"
+                        alt=""
+                        aria-hidden="true"
+                    />
                 </div>
             </section>
         </PageLayout>

@@ -31,3 +31,13 @@ export async function updatePage(id, data) {
 export async function deletePage(id) {
     return api.del(`/pages/${id}`);
 }
+
+// Отримати всі ревізії сторінки (потрібен токен)
+export async function fetchPageRevisions(id) {
+    return api.get(`/pages/${id}/revisions`);
+}
+
+// Відновити конкретну ревізію (потрібен токен)
+export async function restorePageRevision(id, revId) {
+    return api.post(`/pages/${id}/restore/${revId}`);
+}

@@ -1,0 +1,103 @@
+.drop-instruments-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 6px 8px;
+    background: none;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 1.2;
+}
+
+.drop-instruments-btn:hover {
+    color: #3366CC;
+}
+
+.drop-instruments-btn:active {
+    text-decoration: underline;
+}
+
+.pm-icon {
+    display: inline-flex;
+    width: 12px;
+    height: 12px;
+    transition: transform .2s ease;
+}
+
+.drop-instruments-btn[aria-expanded="true"] .pm-icon {
+    transform: scaleY(-1);
+}
+
+
+
+.drop-instruments-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-instruments-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    width: 200px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #4a4a4a;
+    z-index: 1;
+}
+
+
+.drop-instruments-title {
+    position: relative;
+    margin: 0;
+    padding: 16px 14px 4px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.drop-instruments-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 14px;
+    width: 172px;
+    height: 1px;
+    background: #b5c1c6;
+}
+
+
+.drop-instruments-list {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0 0 16px;
+}
+
+.drop-instruments-list li + li {
+    margin-top: 4px;
+}
+
+.drop-instruments-list a,
+.drop-instruments-action {
+    display: block;
+    text-align: left;
+    padding: 3px 14px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #0336cc;
+    font-size: 13px;
+    font-weight: 400;
+    background: none;
+    border: none;
+}
+
+.drop-instruments-list a:hover,
+.drop-instruments-action:hover {
+    text-decoration: underline;
+}
+
+.drop-instruments-list a:active,
+.drop-instruments-action:active {
+    background: none;
+}

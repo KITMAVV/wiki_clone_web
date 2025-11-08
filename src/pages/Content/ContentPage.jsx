@@ -29,7 +29,7 @@ export default function ContentPage() {
 
 
                     <NavigationTextContainer>
-                        <NavSection title="Країни та регіони">
+                        <NavSection title="Країни та регіони" id={"Countries"}>
                             <p>Розділ, присвячений країнам, містам та регіонам усього світу.</p>
                             <ul>
                                 <li>Список усіх країн світу — повний перелік держав з короткими характеристиками та
@@ -41,7 +41,7 @@ export default function ContentPage() {
                             </ul>
                         </NavSection>
 
-                        <NavSection title="Міські локації">
+                        <NavSection title="Міські локації" id={"CityLocations"}>
                             <p>Всі найцікавіші місця для відвідування в межах міст.</p>
                             <ul>
                                 <li>Парки та зелені зони — описи міських парків, ботанічних садів і набережних.</li>
@@ -51,7 +51,7 @@ export default function ContentPage() {
                             </ul>
                         </NavSection>
 
-                        <NavSection title="Готелі та проживання">
+                        <NavSection title="Готелі та проживання" id={"Hotels"}>
                             <p>Корисна інформація про розміщення під час подорожей.</p>
                             <ul>
                                 <li>Огляд готелів за країнами — рейтинги, відгуки та поради з бронювання.</li>
@@ -61,7 +61,7 @@ export default function ContentPage() {
                             </ul>
                         </NavSection>
 
-                        <NavSection title="Поради мандрівникам">
+                        <NavSection title="Поради мандрівникам" id={"Tips"}>
                             <p>Практичні рекомендації для комфортних і безпечних поїздок.</p>
                             <ul>
                                 <li>Підготовка до поїздки — що взяти, як планувати маршрут, як оформити документи.</li>
@@ -71,7 +71,7 @@ export default function ContentPage() {
                             </ul>
                         </NavSection>
 
-                        <NavSection title="Події та фестивалі">
+                        <NavSection title="Події та фестивалі" id={"Events"}>
                             <p>Інформація про головні культурні та розважальні заходи.</p>
                             <ul>
                                 <li>Календар міжнародних подій — ключові дати для мандрівників.</li>
@@ -80,7 +80,7 @@ export default function ContentPage() {
                             </ul>
                         </NavSection>
 
-                        <NavSection title="Їжа та напої">
+                        <NavSection title="Їжа та напої" id={"FoodDrinks"}>
                             <p>Все про гастрономічні враження у різних країнах.</p>
                             <ul>
                                 <li>Ресторани та кафе — рекомендації закладів із національною та міжнародною кухнею.</li>
@@ -90,7 +90,7 @@ export default function ContentPage() {
                             </ul>
                         </NavSection>
 
-                        <NavSection title="Медіа">
+                        <NavSection title="Медіа" id={"Media"}>
                             <p>Візуальні матеріали для натхнення та дослідження місць.</p>
                             <ul>
                                 <li>Фотоальбоми з подорожей — галереї світлин з різних куточків світу.</li>
@@ -99,7 +99,7 @@ export default function ContentPage() {
                             </ul>
                         </NavSection>
 
-                        <NavSection title="Довідка">
+                        <NavSection title="Довідка" id={"Help"}>
                             <p>Корисна інформація про сайт і його роботу.</p>
                             <ul>
                                 <li>Як користуватися сайтом — інструкція з пошуку та публікації статей.</li>

@@ -1,10 +1,8 @@
 .md-wiki-article {
     width: auto;
-
     word-break: break-word;
     overflow-wrap: anywhere;
 }
-
 
 .md-wiki-h2 {
     font-size: 20px;
@@ -12,8 +10,7 @@
     margin: 23px 0 20px;
     font-weight: 500;
     border-bottom: 1px #b5c1c6 solid;
-
-
+    clear: both;
 }
 
 .md-wiki-h3 {
@@ -30,17 +27,15 @@
     letter-spacing: -0.3px;
 }
 
-
 .md-wiki-img {
     display: block;
-    max-width: 35%;
     height: auto;
-    margin: 0.75rem auto;
+    max-width: 100%;
     border: 1px #b5c1c6 solid;
+    margin: 0.75rem auto;
 }
 
-
-.wiki-table {
+.md-wiki-table {
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
@@ -49,7 +44,7 @@
     font-size: 16px;
 }
 
-.wiki-thead th {
+.md-wiki-thead th {
     padding: 10px 12px;
     background: #B5C1C6;
     border: 1px solid #4A4A4A;
@@ -63,7 +58,7 @@
     text-overflow: ellipsis;
 }
 
-.wiki-tbody td {
+.md-wiki-tbody td {
     padding: 10px 12px;
     background: #E4E5E4;
     text-align: center;
@@ -76,6 +71,66 @@
     transition: background-color 0.2s;
 }
 
-.wiki-tr:hover td {
+.md-wiki-tr:hover td {
     background: rgba(228, 229, 228, 0.8);
 }
+
+.md-wiki-strong { font-weight: 700; }
+.md-wiki-em { font-style: italic; }
+.md-wiki-u { text-decoration: underline; }
+
+.md-wiki-quote {
+    margin: 0.75rem 0;
+    padding: 6px 12px;
+    border-left: 4px solid #b5c1c6;
+    background: #f0f0f0;
+    color: #222;
+}
+
+.md-wiki-figure {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    background: #E4E5E4;
+    border: 1px #b5c1c6 solid;
+    padding: 8px;
+    margin: 0.75rem 0;
+    box-sizing: border-box;
+}
+
+.md-wiki-figure > .md-wiki-img { margin: 0; }
+
+.md-wiki-figure.md-img-center,
+.md-wiki-img.md-img-center {
+    display: block;
+    float: none;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.md-wiki-article::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.md-wiki-figcaption {
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1.35;
+    color: #333;
+    text-align: center;
+}
+
+.md-img-left { margin-left: 0; }
+.md-img-right { margin-right: 0; }
+.md-img-center { margin-left: auto; margin-right: auto; clear: both; }
+
+.md-img-wrap.md-img-left  { float: left;  margin: 0.8rem 1rem 0.75rem 0; }
+.md-img-wrap.md-img-right { float: right; margin: 0.8rem 0 1rem 0.75rem; }
+.md-img-wrap.md-img-center { float: none; }
+
+.md-img-plain { border: 1px solid #b5c1c6; border-radius: 3px; }

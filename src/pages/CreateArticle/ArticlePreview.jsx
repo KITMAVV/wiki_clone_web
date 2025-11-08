@@ -55,7 +55,8 @@ export default function PreviewCreatedArticle() {
                     </h1>
                     <Page_menu className="long-line" mainTab="Створення статті" showDiscussion={false}  showHistory={false} />
                     <section className="createArticleContent-wrap">
-                        <MarkdownViewer markdown={data.markdown} enableTables />
+                        <p style={{fontWeight: 400, marginBottom: "20px",}}> Матеріал із Wikitravel — вільної енциклопедії подорожей </p>
+                        <MarkdownViewer markdown={data.markdown} enableTables/>
                     </section>
                 </main>
             </section>

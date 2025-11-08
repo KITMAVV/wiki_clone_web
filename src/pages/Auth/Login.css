@@ -16,9 +16,8 @@
 }
 
 
-/*КАРТИНКА*/
-.login-placeholder {
-    width: 260px;
-    height: 260px;
-    background: #ccc;
+
+.login-logo {
+    width: 240px;
+    height: 240px;
 }
