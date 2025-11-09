@@ -14,7 +14,9 @@ We spent 3 months creating it, and in principle I like everything about it. Some
 
 ### Backedn
 
-Here's a link to my colleague **Sergei's** backend repository: [wikitravel-backend](https://pages.github.com/).
+Here's a link to my colleague **Sergei's** backend repository: [wikitravel-backend](https://github.com/SergeiBereka/wikitravel-backend.git).
+
+#### **Working version of the backend used in the frontend is in the main branch (a newer version of the backend can be found in the master branch).*
 
 ⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘
 ## 🚧 Project Status 🏁
